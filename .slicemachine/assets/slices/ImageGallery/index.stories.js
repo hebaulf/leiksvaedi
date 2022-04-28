@@ -1,0 +1,9 @@
+import MyComponent from '../../../../slices/ImageGallery';
+
+export default {
+  title: 'slices/ImageGallery'
+}
+
+
+export const _Default = () => <MyComponent slice={{"variation":"default","name":"Default","slice_type":"image_gallery","items":[{"image":{"dimensions":{"width":900,"height":500},"alt":"Placeholder image","copyright":null,"url":"https://images.unsplash.com/photo-1606248897732-2c5ffe759c04?w=900&h=500&fit=crop"}},{"image":{"dimensions":{"width":900,"height":500},"alt":"Placeholder image","copyright":null,"url":"https://images.unsplash.com/photo-1596195689404-24d8a8d1c6ea?w=900&h=500&fit=crop"}},{"image":{"dimensions":{"width":900,"height":500},"alt":"Placeholder image","copyright":null,"url":"https://images.unsplash.com/photo-1587613865763-4b8b0d19e8ab?w=900&h=500&fit=crop"}}],"primary":{"imageGalleryTitle":[{"type":"heading3","text":"Facilitate strategic portals","spans":[]}],"imageGalleryDescription":[{"type":"paragraph","text":"Reprehenderit amet anim anim mollit velit eu tempor nostrud laborum proident sint exercitation mollit. Exercitation pariatur ad mollit enim fugiat mollit laboris.","spans":[]}]},"id":"_Default"}} />
+_Default.storyName = 'Default'

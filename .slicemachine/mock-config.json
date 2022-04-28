@@ -1,0 +1,130 @@
+{
+  "_cts": {
+    "homepage": {},
+    "leiksvaedi": {
+      "introTitle": {
+        "config": {
+          "patternType": "HEADING",
+          "blocks": 1
+        }
+      },
+      "introText": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    },
+    "page": {},
+    "playgrounds-page": {},
+    "playground": {},
+    "SledSlopes": {},
+    "slope": {
+      "slopeTitle": {
+        "config": {
+          "patternType": "HEADING",
+          "blocks": 1
+        }
+      },
+      "slopeDescription": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    }
+  },
+  "slices": {
+    "HeroBlock": {
+      "default": {
+        "primary": {
+          "HeroTitleColor": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "HeroTitle": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          },
+          "HeroDesc": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        },
+        "items": {}
+      }
+    },
+    "PageIntro": {
+      "default": {
+        "primary": {
+          "page-intro-title": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          },
+          "page-intro-description": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "Playground": {
+      "default": {
+        "primary": {},
+        "items": {}
+      }
+    },
+    "Image": {
+      "default": {
+        "items": {},
+        "primary": {}
+      }
+    },
+    "ImageGallery": {
+      "default": {
+        "primary": {
+          "imageGalleryTitle": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          },
+          "imageGalleryDescription": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    },
+    "Text": {
+      "default": {
+        "primary": {
+          "text": {
+            "config": {
+              "patternType": "PARAGRAPH",
+              "blocks": 1
+            }
+          },
+          "title": {
+            "config": {
+              "patternType": "HEADING",
+              "blocks": 1
+            }
+          }
+        }
+      }
+    }
+  }
+}

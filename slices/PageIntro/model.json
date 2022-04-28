@@ -1,0 +1,37 @@
+{
+  "id": "page_intro",
+  "type": "SharedSlice",
+  "name": "PageIntro",
+  "description": "PageIntro",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "PageIntro",
+      "primary": {
+        "page-intro-title": {
+          "type": "StructuredText",
+          "config": {
+            "label": "PageIntroTitle",
+            "placeholder": "Title for page intro",
+            "allowTargetBlank": true,
+            "single": "heading1"
+          }
+        },
+        "page-intro-description": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Page Intro Description",
+            "placeholder": "Text for the page intro",
+            "allowTargetBlank": true,
+            "multi": "paragraph"
+          }
+        }
+      },
+      "items": {},
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

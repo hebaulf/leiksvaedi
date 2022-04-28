@@ -1,0 +1,63 @@
+{
+  "id": "hero_block",
+  "type": "SharedSlice",
+  "name": "HeroBlock",
+  "description": "HeroBlock",
+  "variations": [
+    {
+      "id": "default",
+      "name": "Default",
+      "docURL": "...",
+      "version": "sktwi1xtmkfgx8626",
+      "description": "HeroBlock",
+      "primary": {
+        "HeroTitle": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Hero Title",
+            "placeholder": "Add title",
+            "allowTargetBlank": true,
+            "single": "heading1"
+          }
+        },
+        "HeroTitleColor": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Hero Title Color",
+            "placeholder": "Hero title colored",
+            "allowTargetBlank": true,
+            "single": "paragraph,preformatted,heading2,heading3,heading4,heading5,heading6,strong,em,hyperlink,image,embed,list-item,o-list-item,rtl"
+          }
+        },
+        "HeroDesc": {
+          "type": "StructuredText",
+          "config": {
+            "label": "Hero Description",
+            "placeholder": "A nice description of your feature",
+            "allowTargetBlank": true,
+            "multi": "paragraph,hyperlink,list-item,strong"
+          }
+        },
+        "HeroImage": {
+          "type": "Image",
+          "config": {
+            "label": "Hero Image",
+            "constraint": {},
+            "thumbnails": []
+          }
+        }
+      },
+      "items": {
+        "HeroBtn": {
+          "type": "Link",
+          "config": {
+            "label": "Hero Btn",
+            "placeholder": "",
+            "select": null
+          }
+        }
+      },
+      "imageUrl": "https://images.prismic.io/slice-machine/621a5ec4-0387-4bc5-9860-2dd46cbc07cd_default_ss.png?auto=compress,format"
+    }
+  ]
+}

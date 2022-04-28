@@ -1,0 +1,35 @@
+{
+  "id": "7e298f92-f168-4aa9-a719-40a8c2a7546d",
+  "uid": "ipsa-voluptatem-non",
+  "type": "slope",
+  "data": {
+    "slopeTitle": [
+      {
+        "type": "heading1",
+        "text": "Enable vertical e-commerce",
+        "spans": []
+      }
+    ],
+    "slopeDescription": [
+      {
+        "type": "paragraph",
+        "text": "Adipisicing ut anim veniam nulla cillum enim elit pariatur magna aliquip id officia irure veniam eu.",
+        "spans": []
+      }
+    ],
+    "slopeImage": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1586952518485-11b180e92764?w=900&h=500&fit=crop"
+    },
+    "slopeLocation": {
+      "latitude": 48.8841267,
+      "longitude": 2.3300579
+    },
+    "isSkilyft": true
+  }
+}

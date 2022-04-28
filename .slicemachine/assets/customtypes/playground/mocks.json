@@ -1,0 +1,36 @@
+{
+  "id": "fe12fdec-b0f1-4175-b8b7-0c1616ef45be",
+  "uid": "temporibus-tempore-possimus",
+  "type": "playground",
+  "data": {
+    "playgroundTitle": [
+      {
+        "type": "paragraph",
+        "text": "Laboris et duis ut velit ex voluptate Lorem amet. Deserunt incididunt magna non ipsum eiusmod dolore labore esse amet ipsum velit ullamco irure irure sit. Nostrud reprehenderit dolor laborum commodo in nulla labore irure consectetur duis ad irure sint labore.",
+        "spans": []
+      }
+    ],
+    "playgroundDescription": [
+      {
+        "type": "paragraph",
+        "text": "Proident cupidatat dolore nostrud irure. Do ut consectetur nulla veniam duis ipsum culpa eiusmod et do amet. Magna in do pariatur do minim aute veniam et fugiat do.",
+        "spans": []
+      }
+    ],
+    "playgroundPostalcode": "incentivize viral bandwidth",
+    "playgroundLocation": {
+      "latitude": 48.8841267,
+      "longitude": 2.3300579
+    },
+    "playgroundDefaultImage": {
+      "dimensions": {
+        "width": 900,
+        "height": 500
+      },
+      "alt": "Placeholder image",
+      "copyright": null,
+      "url": "https://images.unsplash.com/photo-1525547719571-a2d4ac8945e2?w=900&h=500&fit=crop"
+    },
+    "playgroundType": "Opið leiksvæði"
+  }
+}
