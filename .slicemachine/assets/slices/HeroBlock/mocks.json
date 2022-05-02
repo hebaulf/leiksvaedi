@@ -15,26 +15,20 @@
           "link_type": "Web",
           "url": "http://google.com"
         }
-      },
-      {
-        "HeroBtn": {
-          "link_type": "Web",
-          "url": "https://slicemachine.dev"
-        }
       }
     ],
     "primary": {
       "HeroTitle": [
         {
           "type": "heading1",
-          "text": "Strategize turn-key methodologies",
+          "text": "Hero title",
           "spans": []
         }
       ],
       "HeroTitleColor": [
         {
-          "type": "paragraph",
-          "text": "Enim ipsum proident culpa aliquip aliquip. Ullamco officia sunt dolor consectetur laborum exercitation consequat veniam magna Lorem nostrud velit aliquip laboris. Id fugiat deserunt ea velit qui.",
+          "type": "heading1",
+          "text": "also in color",
           "spans": []
         }
       ],

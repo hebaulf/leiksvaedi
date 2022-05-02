@@ -30,8 +30,8 @@ const Sledabrekkur = ({ prismicSlopes }) => {
 						key={slope.id}
 						cardlinkhref="/sledabrekkur/[id]"
 						cardlinkas={`/sledabrekkur/${slope.uid}`}
-						imgsrc={slope.data.slopeImage.url !== null ? slope.data.slopeImage.url : 'https://www.pngkey.com/png/full/233-2332677_image-500580-placeholder-transparent.png'}
-						imgalt={slope.data.slopeImage.alt !== null ? slope.data.slopeImage.alt : slope.data.slopeTitle[0].text}
+						imgsrc={slope.data.slopeImage.url || 'https://www.pngkey.com/png/full/233-2332677_image-500580-placeholder-transparent.png'}
+						imgalt={slope.data.slopeImage.alt || ""}
 						cardtitle={slope.data.slopeTitle[0].text}
 						cardcontent={slope.data.slopeDescription[0].text}
 						cardmaphref={`http://www.google.com/maps?q=${slope.data.slopeLocation}`}

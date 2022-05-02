@@ -15,7 +15,14 @@
         }
       }
     },
-    "page": {},
+    "page": {
+      "pageTitle": {
+        "config": {
+          "patternType": "PARAGRAPH",
+          "blocks": 1
+        }
+      }
+    },
     "playgrounds-page": {},
     "playground": {},
     "SledSlopes": {},

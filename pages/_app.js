@@ -2,18 +2,16 @@ import Link from 'next/link'
 import { PrismicProvider } from '@prismicio/react'
 import { PrismicPreview } from '@prismicio/next'
 import { linkResolver, repositoryName } from '../prismicio'
-import Header from '../components/Header'
 import '../styles/globals.css'
+import Header from '../components/Header'
 
 export default function App({ Component, pageProps }) {
   return (
     <PrismicProvider 
       linkResolver={linkResolver} 
-      internalLinkComponent={({ href, children, ...props }) => (
-        <Link href={href}>
-          <a {...props}>
-            {children}
-          </a>
+      internalLinkComponent={({ href, locale, children, ...props }) => (
+        <Link href={href} locale={locale}>
+          <a {...props}>{children}</a>
         </Link>
       )}
     >

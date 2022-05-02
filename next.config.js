@@ -2,8 +2,15 @@
 const nextConfig = {
   reactStrictMode: true,
   images: {
-    domains: ['images.unsplash.com', 'www.pngkey.com', 'reykjavik.is', 'images.prismic.io'],
+    loader: "imgix",
+    path: "",
+    domains: ['www.pngkey.com', 'images.prismic.io'],
   },
+  env: {
+    NEXT_PUBLIC_ALGOLIA_APP_ID: process.env.NEXT_PUBLIC_ALGOLIA_APP_I,
+    NEXT_PUBLIC_ALGOLIA_SEARCH_API: process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_API,
+    NEXT_ALGOLIA_ADMIN_API: process.env.NEXT_ALGOLIA_ADMIN_API,
+  }
 }
 
 module.exports = nextConfig

@@ -10,6 +10,15 @@ article {
     width: 100%;
 }
 
+aside {
+    padding-right: 1rem;
+}
+
+aside button {
+    margin-bottom: 1rem;
+    white-space: nowrap;
+}
+
 .card {
     padding-bottom: 60px;
     position: relative;
@@ -18,4 +27,99 @@ article {
 .maplink {
     position: absolute;
     bottom: 10px;
+}
+
+.ais-SearchBox {
+    margin-bottom: 3rem;
+}
+
+.ais-SearchBox-form {
+    height: 4rem;
+    font-size: 1.6rem;
+}
+
+.ais-SearchBox-form:before {
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 1.8rem;
+    width: 1.8rem;
+    top: 40%;
+}
+
+.ais-SearchBox-input {
+    padding-left: 4rem;
+}
+
+.ais-Hits {
+    width: 100%;
+}
+
+.ais-Hits-list {
+    display: grid;
+    gap: 1.5rem;
+    grid-template-columns: repeat(1, minmax(0, 1fr));
+}
+
+.ais-Hits-item, .ais-InfiniteHits-item {
+    position: relative;
+    padding: 0;
+    padding-bottom: 3rem;
+    align-items: flex-start;
+    overflow: hidden;
+}
+
+.ais-Hits-item, 
+.ais-InfiniteHits-item,
+.ais-Hits-item:first-of-type, 
+.ais-InfiniteHits-item:first-of-type,
+.ais-Hits-item:last-of-type, 
+.ais-InfiniteHits-item:last-of-type {
+    border-radius: 16px;
+}
+
+.card__description,
+.maplink {
+    padding-left: 1rem;
+    padding-right: 1rem;
+}
+
+.heroimage-wrap > span {
+    height: 100% !important;
+}
+
+.ais-Stats-text {
+    display: block;
+    text-align: right;
+    padding: .3rem 0 1rem 0;
+    color: #9d9d9d;
+    font-weight: 200;
+}
+
+
+@media (min-width: 420px) {
+    .content-wrapper {
+        display: flex;
+    }
+}
+
+@media (min-width: 580px) {
+    .ais-Hits-list {
+        grid-template-columns: repeat(2, minmax(0, 1fr));
+    }
+}
+
+@media (min-width: 768px) {
+    .ais-Hits-list {
+        grid-template-columns: repeat(3, minmax(0, 1fr));
+    }
+}
+
+/* @media (min-width: 1024px) {
+    
+} */
+
+@media (min-width: 1280px) {
+    .ais-Hits-list {
+        grid-template-columns: repeat(4, minmax(0, 1fr));
+    }
 }

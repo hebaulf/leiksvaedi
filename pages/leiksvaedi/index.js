@@ -30,8 +30,8 @@ const Leiksvaedi = ({ prismicPlaygrounds }) => {
 						key={playground.id}
 						cardlinkhref="/leiksvaedi/[id]"
 						cardlinkas={`/leiksvaedi/${playground.uid}`}
-						imgsrc={playground.data.playgroundDefaultImage.url !== null ? playground.data.playgroundDefaultImage.url : 'https://www.pngkey.com/png/full/233-2332677_image-500580-placeholder-transparent.png'}
-						imgalt={playground.data.playgroundDefaultImage.alt !== null ? playground.data.playgroundDefaultImage.alt : playground.data.playgroundTitle[0].text}
+						imgsrc={playground.data.playgroundDefaultImage.url || 'https://www.pngkey.com/png/full/233-2332677_image-500580-placeholder-transparent.png'}
+						imgalt={playground.data.playgroundDefaultImage.alt || ""}
 						cardtitle={playground.data.playgroundTitle[0].text}
 						cardcontent={playground.data.playgroundDescription[0].text}
 						cardmaphref={`http://www.google.com/maps?q=${playground.data.location}`}
