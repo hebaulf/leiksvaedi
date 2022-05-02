@@ -1,6 +1,101 @@
+import Head from 'next/head'
+import algoliasearch from 'algoliasearch/lite'
 import { createClient } from '../../prismicio'
+import { 
+  InstantSearch, 
+  SearchBox, 
+  Hits, 
+  ClearRefinements, 
+  Panel, 
+  RefinementList,
+  connectStateResults,
+  Stats,
+} from 'react-instantsearch-dom'
 import PageIntro from '../../components/PageIntro'
 import Card from '../../components/Card'
+
+const searchClient = algoliasearch(process.env.NEXT_PUBLIC_ALGOLIA_APP_ID, process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_API);
+ 
+const Leiksvaedi = () => {
+  return (
+		<>
+			<Head>
+        <title>Leiksvæði</title>
+        <meta name="Leiksvæði í Reykjavík" content="Listi og leit fyrir leiksvæði í Reykjavík" />
+      </Head>
+			
+			<div className="mt-12 mx-auto px-4 max-w-screen-xl lg:px-8">
+				<PageIntro 
+					title="Leiksvæði" 
+					text="Skoðaðu leiksvæði að þinni hentugsemi og leitaðu eftir tegund svæðis, tegund leiktækja eða öðru sem hentar."
+				/>
+
+				<div className="relative bg-white overflow-hidden">
+					<div className="mt-8 mx-auto max-w-screen-xl pb-4 px-4 items-center md:px-8">
+						<InstantSearch searchClient={searchClient} indexName="playgrounds">
+							<SearchBox />
+							<div className="content-wrapper">
+								<Facets />
+								<CustomResults />
+							</div>
+						</InstantSearch>
+					</div>
+				</div>
+			</div>
+		</>
+  )
+}
+
+const Hit = ({ hit }) => {
+  return (
+    <Card 
+      cardlinkhref={`/leiksvaedi/${hit.uid}`}
+      imgsrc={hit.image_url}
+      imgalt={hit.image_alt}
+      cardtitle={hit.title}
+      cardcontent={hit.description}
+      latitude={hit.latitude}
+      longitude={hit.longitude}
+      cardmaptext={`Sjá á Korti`}
+    />
+  )
+};
+
+const Facets = () => (
+  <aside>
+    <ClearRefinements
+      translations={{
+        reset: 'Hreinsa',
+      }}
+    />
+
+    <Panel header="Flokkar">
+      <RefinementList attribute="tags" operator="or" limit={10} />
+    </Panel>
+
+    <Panel header="Tegund">
+      <RefinementList attribute="type" operator="or" limit={10} />
+    </Panel>
+  </aside>
+);
+
+const CustomResults = connectStateResults(({ searchState, searchResults }) => (
+  <div className="results-wrapper">
+    <div className="results-topbar">
+      <Stats />
+    </div>
+
+    {searchResults && searchResults.nbHits ? (
+      <Hits hitComponent={Hit} />
+    ) : (
+      <div className="no-results">
+        Ekkert fannst með leitarskilyrðunum &quot;<span className="query">{searchState.query}</span>&quot;
+      </div>
+    )}
+  </div>
+));
+
+export default Leiksvaedi
 
 export async function getStaticProps({ previewData }) {
 	const client = createClient({ previewData })
@@ -12,35 +107,3 @@ export async function getStaticProps({ previewData }) {
 		},
 	}
 }
- 
-const Leiksvaedi = ({ prismicPlaygrounds }) => {
-	// console.log("playgrounds: ", prismicPlaygrounds)
-
-  return (
-    <section className="mt-12 mx-auto px-4 max-w-screen-xl lg:px-8">
-			{/* <pre>{JSON.stringify(prismicPlaygrounds, null, 2)}</pre> */}
-			<PageIntro 
-				title="Leiksvæði" 
-				text="Skoðaðu leiksvæði að þinni hentugsemi og leitaðu eftir tegund svæðis, tegund leiktækja eða öðru sem hentar."
-			/>
-
-			<div className="mt-12 grid gap-6 sm:grid-cols-2 lg:grid-cols-3">
-				{prismicPlaygrounds.map((playground) => (
-					<Card
-						key={playground.id}
-						cardlinkhref="/leiksvaedi/[id]"
-						cardlinkas={`/leiksvaedi/${playground.uid}`}
-						imgsrc={playground.data.playgroundDefaultImage.url || 'https://www.pngkey.com/png/full/233-2332677_image-500580-placeholder-transparent.png'}
-						imgalt={playground.data.playgroundDefaultImage.alt || ""}
-						cardtitle={playground.data.playgroundTitle[0].text}
-						cardcontent={playground.data.playgroundDescription[0].text}
-						cardmaphref={`http://www.google.com/maps?q=${playground.data.location}`}
-						cardmaptext="Kort"
-					/>
-				))}
-			</div>
-    </section>
-  )
-}
-
-export default Leiksvaedi

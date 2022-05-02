@@ -20,9 +20,9 @@ const Header = () => {
     <header>
 			<nav className="relative items-center pt-5 px-4 mx-auto max-w-screen-xl sm:px-8 sm:flex sm:space-x-6">
 				<div className="flex justify-between">
-					<PrismicLink href="/">
+					<Link href="/" >
 						<a>Leikur</a>
-					</PrismicLink>
+					</Link>
 					<button 
 						className="text-gray-500 outline-none sm:hidden"
 						onClick={() => setState(!state)}

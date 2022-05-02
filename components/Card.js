@@ -3,7 +3,6 @@ import Image from "next/image"
 
 const Card = ({
   cardlinkhref,
-  cardlinkas,
   imgsrc,
   imgalt,
   cardtitle,
@@ -14,7 +13,7 @@ const Card = ({
 }) => {
   return (
     <div>
-      <Link href={cardlinkhref} as={cardlinkas}>
+      <Link href={cardlinkhref} passHref>
         <a>
           <Image 
             src={imgsrc || "https://www.pngkey.com/png/full/233-2332677_image-500580-placeholder-transparent.png"} 

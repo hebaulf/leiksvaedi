@@ -1,7 +1,5 @@
 import Head from 'next/head'
-import Link from 'next/link'
-import Image from 'next/image'
-import algoliasearch from 'algoliasearch/lite';
+import algoliasearch from 'algoliasearch/lite'
 import { createClient } from '../prismicio'
 import { 
   InstantSearch, 
@@ -12,9 +10,9 @@ import {
   RefinementList,
   connectStateResults,
   Stats,
-} from 'react-instantsearch-dom';
-import Hero from '../components/Hero';
-import Card from '../components/Card';
+} from 'react-instantsearch-dom'
+import Hero from '../components/Hero'
+import Card from '../components/Card'
 
 const searchClient = algoliasearch(process.env.NEXT_PUBLIC_ALGOLIA_APP_ID, process.env.NEXT_PUBLIC_ALGOLIA_SEARCH_API);
 
@@ -55,7 +53,6 @@ const Hit = ({ hit }) => {
   return (
     <Card 
       cardlinkhref={`/leiksvaedi/${hit.uid}`}
-      cardlinkas={`/leiksvaedi/${hit.uid}`}
       imgsrc={hit.image_url}
       imgalt={hit.image_alt}
       cardtitle={hit.title}
