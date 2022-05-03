@@ -4,7 +4,7 @@ The purpose of this project is for people (parents mostly) to be able to search 
 
 I did this using [React InstantSearch](https://www.algolia.com/doc/guides/building-search-ui/what-is-instantsearch/react/), which is a library for building super fast search-as-you-type search UI's with [Algolia](https://www.algolia.com/), a search API.
 
-##[Live Site](https://leiksvaedi.vercel.app/)
+### [Live Site](https://leiksvaedi.vercel.app/)
 
 &nbsp;
 
