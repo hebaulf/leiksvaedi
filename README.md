@@ -1,10 +1,12 @@
-# Algolia Site Search - React Instantsearch
+# Algolia Site Search - React Instantsearch  
+
+### [Live Site](https://leiksvaedi.vercel.app/)
 
 The purpose of this project is for people (parents mostly) to be able to search and filter results for playgrounds, sled slopes or other open-area spaces based on criteria, with descriptions and other information, images and location.  
 
-I did this using [React InstantSearch](https://www.algolia.com/doc/guides/building-search-ui/what-is-instantsearch/react/), which is a library for building super fast search-as-you-type search UI's with [Algolia](https://www.algolia.com/), a search API.
+I decided to use Algolia as a search engine after talking with a programmer who has recently set it up on the [Listasafn Íslands website](https://www.listasafn.is/en/) and also a few years earlier on [Icelandair's website](https://www.icelandair.com/en-gb/). He sold me on the idea that it was pretty easy to set up and it is super fast. So I did a little research and came to the conclusion it was the best choice for a small project, like the one I had in mind.  
 
-### [Live Site](https://leiksvaedi.vercel.app/)
+I used [React InstantSearch](https://www.algolia.com/doc/guides/building-search-ui/what-is-instantsearch/react/), a library for building super fast search-as-you-type search UI's with [Algolia](https://www.algolia.com/), which is a search API.  
 
 &nbsp;
 
