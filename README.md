@@ -8,7 +8,7 @@ I did this using [React InstantSearch](https://www.algolia.com/doc/guides/buildi
 
 &nbsp;
 
-<img src="https://raw.githubusercontent.com/hebaulf/prismic-blog/main/public/static/images/blog-screenshot.png" alt="Screenshots of the site seen on deskop and mobile browsers" />
+<img src="https://raw.githubusercontent.com/hebaulf/leiksvaedi/main/public/leiksvaedi.jpg" alt="Screenshots of the site seen on deskop and mobile browsers" />
 
 &nbsp;
 
