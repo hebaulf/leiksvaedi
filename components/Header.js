@@ -1,6 +1,6 @@
 import { useState } from 'react'
 import Link from 'next/link'
-import { PrismicLink } from "@prismicio/react";
+import { HomeIcon } from '@heroicons/react/solid'
 
 // const NavItem = ({ children }) => {
 //   return (
@@ -16,12 +16,12 @@ const Header = () => {
 		{ name: 'Sleðabrekkur', path: '/sledabrekkur' },
 	]
     
-  return (
-    <header>
+  	return (
+    	<header>
 			<nav className="relative items-center pt-5 px-4 mx-auto max-w-screen-xl sm:px-8 sm:flex sm:space-x-6">
 				<div className="flex justify-between">
 					<Link href="/" >
-						<a>Leikur</a>
+						<a><HomeIcon className="h-10 w-10 text-indigo-600 hover:transition-all hover:h-12 hover:w-12 hover:text-indigo-700"/></a>
 					</Link>
 					<button 
 						className="text-gray-500 outline-none sm:hidden"
@@ -40,7 +40,7 @@ const Header = () => {
 						}
 					</button>
 				</div>
-				<ul className={`bg-white shadow-md rounded-md p-4 flex-1 mt-12 absolute z-20 top-8 right-4 w-64 border sm:shadow-none sm:block sm:border-0 sm:mt-0 sm:static sm:w-auto ${state ? '' : 'hidden'}`}>
+				<ul className={`p-4 flex-1 mt-12 absolute z-20 top-8 right-4 w-64 border sm:shadow-none sm:block sm:border-0 sm:mt-0 sm:static sm:w-auto ${state ? '' : 'hidden'}`}>
 					<div className="order-1 justify-end items-center space-y-5 sm:flex sm:space-x-6 sm:space-y-0">
 						{
 							navigation.map((item, idx) => (
@@ -55,7 +55,7 @@ const Header = () => {
 				</ul>
 			</nav>
 		</header>
-  )
+  	)
 }
 
 export default Header

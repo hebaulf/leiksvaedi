@@ -3,11 +3,16 @@ const fetch = require('node-fetch');
 const prismic = require('@prismicio/client');
 const algolia = require('algoliasearch');
 
+console.log("App ID: ", process.env.NEXT_PUBLIC_ALGOLIA_APP_ID)
+console.log("Admin API: ", process.env.NEXT_ALGOLIA_ADMIN_API)
+
+
+
 async function instantiateData() {
 	// Get Prismic repository
 	const client = prismic.createClient('leiksvaedi', { fetch });
 	// Initiate Algolia client
-	const algoliaClient = algolia('E1MY7EOBEV', '7770b5c0f086b2e9afab276231689764');
+	const algoliaClient = algolia(process.env.NEXT_PUBLIC_ALGOLIA_APP_ID, process.env.NEXT_ALGOLIA_ADMIN_API);
 
 	// Get playgrounds from Prismic
 	const getPlaygrounds = await client.getAllByType('playground');

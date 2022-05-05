@@ -37,7 +37,7 @@ const Home = ({ page }) => {
       <div className="relative bg-white overflow-hidden">
         <div className="mt-8 mx-auto max-w-screen-xl pb-4 px-4 items-center md:px-8">
           <InstantSearch searchClient={searchClient} indexName="playgrounds">
-            <SearchBox />
+            <SearchBox placeholder="Leitaðu hér" />
             <div className="content-wrapper">
               <Facets />
               <CustomResults />
@@ -73,11 +73,15 @@ const Facets = () => (
     />
 
     <Panel header="Flokkar">
-      <RefinementList attribute="tags" operator="or" limit={10} />
+      <RefinementList attribute="tags" operator="and" limit={10} showMore />
     </Panel>
 
     <Panel header="Tegund">
-      <RefinementList attribute="type" operator="or" limit={10} />
+      <RefinementList attribute="type" operator="and" limit={10} showMore />
+    </Panel>
+
+    <Panel header="Póstnúmer">
+      <RefinementList attribute="postal_code" operator="or" limit={10} showMore />
     </Panel>
   </aside>
 );
