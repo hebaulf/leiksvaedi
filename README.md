@@ -18,6 +18,9 @@ I used [React InstantSearch](https://www.algolia.com/doc/guides/building-search-
 - [Figma](https://www.figma.com/file/jvZwfXC2k54UzPWEJGqLiK/Leiksv%C3%A6%C3%B0i?node-id=9%3A256)
 - [Trello](https://trello.com/b/uqaRcjkj)
 - [Research Plan](https://docs.google.com/document/d/1OkaT8R1GwkFL3oBCgeQO2-0nYSwmwdO1G1hUgrLWiAM/edit?usp=sharing)
+- [Video Introduction]()
+- [Workshop Project](https://codepen.io/hebfar/pen/abqvWBa)
+- [Workshop Project - Finished](https://codepen.io/hebfar/pen/wvyKaro)
 
 
 ## Tech Used
