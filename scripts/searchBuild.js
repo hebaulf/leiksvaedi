@@ -3,11 +3,6 @@ const fetch = require('node-fetch');
 const prismic = require('@prismicio/client');
 const algolia = require('algoliasearch');
 
-console.log("App ID: ", process.env.NEXT_PUBLIC_ALGOLIA_APP_ID)
-console.log("Admin API: ", process.env.NEXT_ALGOLIA_ADMIN_API)
-
-
-
 async function instantiateData() {
 	// Get Prismic repository
 	const client = prismic.createClient('leiksvaedi', { fetch });
